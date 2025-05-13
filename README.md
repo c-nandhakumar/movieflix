@@ -1,16 +1,18 @@
-# sample
+# MovieFlix
 
-A new Flutter project.
+A sample Flutter project that demonstrates clean architecture, BLoC for state management, REST API integration, and unit testing.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Fetches movie data from a REST API
+- BLoC pattern for state management
+- Clean architecture (separated data, domain, and presentation layers)
+- Unit & BLoC tests with `mocktail` and `bloc_test`
+- JSON serialization using `json_serializable`
+- Dependency injection using `get_it`
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Demo video 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/user-attachments/assets/17225f29-da08-4077-9c79-e78eff4df30f
