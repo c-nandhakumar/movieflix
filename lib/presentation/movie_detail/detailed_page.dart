@@ -17,7 +17,7 @@ class _DetailedPageState extends State<DetailedPage> {
       body: ListView(
         children: [
           Hero(
-            tag: widget.film.thumbnail ?? Constants.Placeholder,
+            tag: widget.film.thumbnail ?? widget.film.title ?? "",
             child: Image(
               fit: BoxFit.fitWidth,
               image: NetworkImage(
