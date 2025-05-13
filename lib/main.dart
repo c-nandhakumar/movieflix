@@ -4,14 +4,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sample/bloc/film_bloc.dart';
 import 'package:sample/constants.dart';
 import 'package:sample/data/movie_datasource.dart';
+import 'package:sample/locator.dart';
 import 'package:sample/presentation/home/home_page.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
+  setupLocator();
   runApp(MovieFlix());
 }
 
 class MovieFlix extends StatelessWidget {
-  final movieRepository = MovieDatasource(apiUrl: Constants.URL);
+  final movieRepository = MovieDatasource(
+    apiUrl: Constants.URL,
+    client: getIt<http.Client>(),
+  );
 
   @override
   Widget build(BuildContext context) {

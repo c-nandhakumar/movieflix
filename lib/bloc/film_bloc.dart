@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 import 'package:sample/data/movie_datasource.dart';
 import 'package:sample/domain/film.dart';

@@ -1,20 +1,26 @@
 part of 'film_bloc.dart';
 
-@immutable
-sealed class FilmState {}
+abstract class FilmState extends Equatable {
+  @override
+  List<Object?> get props => [];
+}
 
-final class FilmInitial extends FilmState {}
+class FilmInitial extends FilmState {}
 
-final class FilmLoading extends FilmState {}
+class FilmLoading extends FilmState {}
 
 class MovieLoaded extends FilmState {
-  final List<Film> movies;
+  final List<Film> films;
+  MovieLoaded(this.films);
 
-  MovieLoaded(this.movies);
+  @override
+  List<Object?> get props => [films];
 }
 
 class MovieError extends FilmState {
   final String message;
-
   MovieError(this.message);
+
+  @override
+  List<Object?> get props => [message];
 }

@@ -17,7 +17,7 @@ class CarousalView extends StatefulWidget {
 
 class _CarousalViewState extends State<CarousalView> {
   late PageController _pageController;
-  int _currentPage = 0;
+  int _currentPage = 1;
 
   @override
   void initState() {
@@ -39,7 +39,7 @@ class _CarousalViewState extends State<CarousalView> {
     return Column(
       children: <Widget>[
         AspectRatio(
-          aspectRatio: 0.85,
+          aspectRatio: 0.80,
           child: PageView.builder(
             itemCount: widget.films.length,
             physics: const ClampingScrollPhysics(),
@@ -86,7 +86,7 @@ class _CarousalViewState extends State<CarousalView> {
       children: <Widget>[
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(0),
             child: Hero(
               tag: data.thumbnail ?? data.title ?? "",
               child: GestureDetector(
@@ -100,7 +100,7 @@ class _CarousalViewState extends State<CarousalView> {
                 },
                 child: Container(
                   height: 458.h,
-                  width: 310.w,
+                  width: isVisible ? 310.w : 330.w,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(50),
