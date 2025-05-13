@@ -60,7 +60,7 @@ class MovieScreen extends StatelessWidget {
         MovieSection(),
         Genres(),
         SizedBox(height: 72.h),
-        CarousalView(films: state.movies),
+        CarousalView(films: state.films),
       ],
     );
   }

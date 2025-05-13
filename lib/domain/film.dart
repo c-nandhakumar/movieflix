@@ -1,9 +1,10 @@
+import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'film.g.dart';
 
 @JsonSerializable(explicitToJson: true)
-class Film {
+class Film extends Equatable {
   final String? title;
   final int? year;
   final List<String>? cast;
@@ -31,4 +32,17 @@ class Film {
   factory Film.fromJson(Map<String, dynamic> json) => _$FilmFromJson(json);
 
   Map<String, dynamic> toJson() => _$FilmToJson(this);
+
+  @override
+  List<Object?> get props => [
+    title,
+    year,
+    cast,
+    genres,
+    href,
+    extract,
+    thumbnail,
+    thumbnailWidth,
+    thumbnailHeight,
+  ];
 }
