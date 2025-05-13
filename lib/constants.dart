@@ -9,7 +9,7 @@ class Constants {
 
   static final textColor = Color(0xFF12153D);
   static final primaryColor = Color(0xFFFE6D8E);
-  static final textColorLigh = Color(0xFF9A9BB2);
+  static final textColorLight = Color(0xFF9A9BB2);
 
   static final primaryShadow = BoxShadow(
     offset: Offset(0, 4),
